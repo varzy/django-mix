@@ -1,0 +1,15 @@
+.layout-base {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &-header {
+    flex-shrink: 0;
+  }
+
+  &-content {
+    flex: 1;
+    height: 100%;
+    padding-bottom: 36px;
+  }
+}

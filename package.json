@@ -1,0 +1,44 @@
+{
+  "name": "JGMSYS",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:allen0125/JGMSYS.git",
+  "license": "MIT",
+  "engines": {
+    "node": "^10.15.2",
+    "npm": "^6.12.0"
+  },
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "lint:eslint": "eslint --ext 'js,vue' resources",
+    "lint:prettier": "prettier --write resources/**/*.{js,json,vue,css,scss,sass}",
+    "lint": "npm run lint:prettier && npm run lint:eslint",
+    "serve": "cd django_mix && python3 manage.py runserver 0.0.0.0:8000; exit 0",
+    "watch": "npm run development -- --watch",
+    "prod": "npm run lint && npm run production; exit 0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "lodash": "^4.17.15",
+    "normalize.css": "^8.0.1",
+    "popper.js": "^1.16.0",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "browser-sync-webpack-plugin": "^2.0.1",
+    "cross-env": "^6.0.3",
+    "eslint": "^6.5.1",
+    "eslint-plugin-vue": "^5.2.3",
+    "laravel-mix": "^5.0.0",
+    "prettier": "^1.18.2",
+    "resolve-url-loader": "^3.1.0",
+    "sass": "^1.23.0",
+    "sass-loader": "^8.0.0",
+    "vue-template-compiler": "^2.6.10"
+  }
+}

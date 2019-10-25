@@ -1,0 +1,19 @@
+{% extends "./layouts/base.html" %}
+
+{% load static %}
+
+{% block content %}
+<div class="index container">
+  <hello-world></hello-world>
+  <button id="change-bgc" type="button" class="btn btn-primary">Change BGC</button>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  RegisteredFeatures.push(
+    function() { Features.ChangeBgc('.index #change-bgc', '#eee') },
+    Features.SayHi
+  );
+</script>
+{% endblock %}

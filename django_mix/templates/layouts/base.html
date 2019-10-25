@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JGMSYS</title>
+
+  <link rel="icon" type="image/png" href="{% static 'favicon.ico' %}">
+  <link rel="stylesheet" href="{% static 'css/app.css' %}">
+  {% block styles %} {% endblock %}
+
+  <script src="{% static 'js/manifest.js' %}"></script>
+  <script src="{% static 'js/vendor.js' %}"></script>
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+</head>
+
+<body>
+  <div id="app" class="layout-base">
+    <div class="layout-base-header">
+      {% include "../widgets/_header.html" %}
+    </div>
+
+    <main class="layout-base-content">
+      {% block content %} {% endblock %}
+    </main>
+  </div>
+
+  <script src="{% static 'js/app.js' %}"></script>
+  {% block scripts %} {% endblock %}
+</body>
+
+</html>
