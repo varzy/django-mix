@@ -2,5 +2,5 @@ window.Features = {};
 window.RegisteredFeatures = [];
 
 window.onload = function() {
-  window.RegisteredFeatures.map(feature => feature());
+  window.RegisteredFeatures.forEach(feature => feature());
 };
