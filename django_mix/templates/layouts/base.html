@@ -7,15 +7,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>JGMSYS</title>
+  <title>django-mix</title>
 
   <link rel="icon" type="image/png" href="{% static 'favicon.ico' %}">
   <link rel="stylesheet" href="{% static 'css/app.css' %}">
   {% block styles %} {% endblock %}
-
-  <script src="{% static 'js/manifest.js' %}"></script>
-  <script src="{% static 'js/vendor.js' %}"></script>
-  <script src="{% static 'js/bootstrap.js' %}"></script>
 </head>
 
 <body>
@@ -29,6 +25,9 @@
     </main>
   </div>
 
+  <script src="{% static 'js/manifest.js' %}"></script>
+  <script src="{% static 'js/vendor.js' %}"></script>
+  <script src="{% static 'js/bootstrap.js' %}"></script>
   <script src="{% static 'js/app.js' %}"></script>
   {% block scripts %} {% endblock %}
 </body>
